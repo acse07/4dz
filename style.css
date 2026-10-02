@@ -1,0 +1,37 @@
+body {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 16px;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.list-heading,
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.list-heading { align-items: center; justify-content: space-between; }
+.cards { display: grid; gap: 16px; }
+.card { border-top: 1px solid #ddd; padding-top: 12px; }
+.photo { width: 120px; height: 100px; object-fit: cover; background: #eee; }
+.description { white-space: pre-wrap; }
+.price { font-weight: bold; }
+form, label { display: grid; gap: 8px; }
+form { gap: 14px; }
+input, textarea, button { padding: 8px; font: inherit; }
+textarea { min-height: 80px; }
+.status { color: #555; }
+.error { color: #b00; }
+
+@media (max-width: 700px) {
+  .layout { grid-template-columns: 1fr; }
+}

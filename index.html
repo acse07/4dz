@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Доска объявлений</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><div class="container topbar"><div class="brand">Доска объявлений</div></div></header>
+  <main class="container">
+    <h1>Объявления</h1>
+    <div class="layout">
+      <section class="panel" aria-labelledby="ads-title">
+        <div class="list-heading"><h2 id="ads-title">Все объявления</h2><button class="secondary" id="refresh" type="button">Обновить</button></div>
+        <p class="status" id="list-status" role="status" aria-live="polite">Загружаем объявления…</p>
+        <div class="cards" id="cards"></div>
+      </section>
+      <aside class="panel form-panel">
+        <h2>Разместить объявление</h2>
+        <form id="ad-form">
+          <label>Название<input name="title" type="text" maxlength="200" required placeholder="Например, Ноутбук"></label>
+          <label>Описание<textarea name="description" maxlength="3000" required placeholder="Расскажите о товаре"></textarea></label>
+          <label>Цена, сом<input name="price" type="number" min="0" step="0.01" required placeholder="Например, 45000"></label>
+          <label>Изображение <span class="hint">(необязательно)</span><input name="image" type="file" accept="image/*"></label>
+          <button class="primary" id="submit" type="submit">Опубликовать</button>
+          <p class="status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </aside>
+    </div>
+  </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
